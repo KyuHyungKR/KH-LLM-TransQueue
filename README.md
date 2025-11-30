@@ -101,12 +101,12 @@ Verify the configuration files in the `conf/` folder for accurate cost tracking.
 
 ## 🇰🇷 한글 버전
 
-KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 연동 능력을 결합한 **경량 자막 병렬 번역 시스템**입니다. 시스템의 모든 요소는 \*\*'모듈성'\*\*과 \*\*'포터빌리티(Portable)'\*\*를 최우선 가치로 설계되었습니다.
+KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 연동 능력을 결합한 **병렬 자막 번역 시스템**입니다. 시스템의 모든 요소는 \*\*'모듈성'\*\*과 \*\*'모빌리티(Portable)'\*\*를 최우선 가치로 설계되었습니다.
 
 
 ## 🌟 프로젝트 개요 및 아키텍처
 
-이 프로젝트는 마스터-워커(Master-Worker) 구조를 사용하여 다수의 자막 파일을 효율적으로 처리하고, 비용 및 토큰 사용량을 실시간으로 추적합니다.
+이 프로젝트는 마스터-워커(Master-Worker) 구조를 사용하여 다수의 자막 파일을 효율적으로 처리하고, 비용 및 토큰 사용량을 실시간으로 계산하도록 되어있습니다.
 
 
 ### 핵심 요소 (Core Components)
@@ -114,10 +114,10 @@ KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 
 | **요소 (Component)**       | **역할 (Role)**      | **특징 (Design Feature)**                                                            |
 | ------------------------ | ------------------ | ---------------------------------------------------------------------------------- |
 | `bin/llm-scheduler.sh`   | **마스터 오케스트레이터**    | Bash의 `wait -n` 기능을 사용하여 백그라운드에서 병렬 워커를 관리하고, `set +e` 처리를 통해 워커 실패 시 전체 큐를 보호합니다. |
-| `bin/single_trans.sh`    | **원자적 워커**         | 파일당 처리의 최소 단위입니다. 비용 로깅이 실패해도 해당 파일만 실패 처리하고 큐를 보호합니다.                             |
+| `bin/single_trans.sh`    | **싱글 워커**         | 파일당 처리의 최소 단위입니다. 비용 로깅이 실패해도 해당 파일만 실패 처리하고 큐를 보호합니다.                             |
 | `source/gpt-subtrans.py` | **LLM 엔진 코어**      | Python 환경에서 OpenAI API를 호출하여 자막을 배치 처리하고 토큰 사용량을 stdout으로 출력합니다.                   |
 | `engine/envsubtrans`     | **런타임 환경**         | `llm-install-engine.sh`로 자동 생성되는 격리된 Python 가상 환경(venv)입니다. OS 환경 종속성을 제거합니다.      |
-| `conf/`                  | **금융 정보 DB & API** | API 키, 모델별 가격, 환율 등 민감한 재정 관련 데이터를 분리 보관하여 보안을 강화합니다.                              |
+| `conf/`                  | **금융 정보 DB & API** | API 키, 모델별 가격, 환율 등 민감한 금융 관련 데이터를 분리 보관하여 보안을 강화합니다.                              |
 
 
 ## 🛠️ 설치 및 환경 구축 (Installation)
@@ -131,7 +131,7 @@ KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 
     cd KH-LLM-TransQueue
 
     # 필수 디렉토리 구조
-    # srt/input에 번역할 SRT 파일을 넣어주세요.
+    # srt/input 번역할 SRT 파일을 넣는곳입니다.
     mkdir -p srt/input srt/output srt/success srt/failed
 
 
@@ -210,3 +210,4 @@ API 키는 `conf/openai_api.key` 파일에 저장되며, `llm-api-key-manager.sh
 KH-LLM-TransQueue is distributed under the MIT License. See the `LICENSE` file in the repository root for full license text.
 
 KH-LLM-TransQueue는 MIT 라이선스로 배포되며, 자세한 내용은 저장소 루트의 `LICENSE` 파일을 참고해 주세요. 본 프로젝트는 LLM-Subtrans 및 그 종속 라이브러리들의 라이선스를 `engine/LICENSE.llm-subtrans` 파일에 명시된 형태 그대로 존중하고 준수합니다.
+
