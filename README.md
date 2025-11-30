@@ -1,4 +1,4 @@
-# 👑 KH LLM TransQueue: : Subtitle Translator(v1.2:Stability)
+# 👑 KH LLM TransQueue: : Subtitle Translator(v1.2)
 
 ## 🌎 English Version
 
@@ -217,6 +217,7 @@ API 키는 `conf/openai_api.key` 파일에 저장되며, `llm-api-key-manager.sh
 KH-LLM-TransQueue is distributed under the MIT License. See the `LICENSE` file in the repository root for full license text.
 
 KH-LLM-TransQueue는 MIT 라이선스로 배포되며, 자세한 내용은 저장소 루트의 `LICENSE` 파일을 참고해 주세요. 본 프로젝트는 LLM-Subtrans 및 그 종속 라이브러리들의 라이선스를 `engine/LICENSE.llm-subtrans` 파일에 명시된 형태 그대로 존중하고 준수합니다.
+
 
 
 
