@@ -1,4 +1,4 @@
-# 👑 KH LLM TransQueue (v1.2: Final Stability)
+# 👑 KH LLM TransQueue: : Subtitle Translator(v1.2:Stability)
 
 ## 🌎 English Version
 
@@ -106,7 +106,7 @@ Verify the configuration files in the `conf/` folder for accurate cost tracking.
 | `conf/llm-cost-fx.conf`  | Defines exchange rates (KRW, JPY, etc.) relative to USD. |
 
 
-## 🇰🇷 한글 버전
+## 🇰🇷 한글 버전 (OpenAI API 기반 영화자막 번역기)
 
 KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 연동 능력을 결합한 **병렬 자막 번역 시스템**입니다. 시스템의 모든 요소는 \*\*'모듈성'\*\*과 \*\*'모빌리티(Portable)'\*\*를 최우선 가치로 설계되었습니다.
 
@@ -217,5 +217,6 @@ API 키는 `conf/openai_api.key` 파일에 저장되며, `llm-api-key-manager.sh
 KH-LLM-TransQueue is distributed under the MIT License. See the `LICENSE` file in the repository root for full license text.
 
 KH-LLM-TransQueue는 MIT 라이선스로 배포되며, 자세한 내용은 저장소 루트의 `LICENSE` 파일을 참고해 주세요. 본 프로젝트는 LLM-Subtrans 및 그 종속 라이브러리들의 라이선스를 `engine/LICENSE.llm-subtrans` 파일에 명시된 형태 그대로 존중하고 준수합니다.
+
 
 
