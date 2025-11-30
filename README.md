@@ -4,11 +4,13 @@
 
 KH-LLM-TransQueue is a **lightweight subtitle parallel processing system** that combines the concurrency of Bash scripting with the LLM integration capabilities of Python. All elements are designed with **'Modularity'** and **'Portability'** as the highest priorities.
 
-
 ## 🌟 Project Overview & Architecture
 
 This project uses a Master-Worker architecture to efficiently process multiple subtitle files and track cost and token usage in real-time.
 
+![프로젝트 제목 이미지](./docs/images/title.png)
+
+![프로젝트 제목 이미지](./docs/images/translate-2.png)
 
 ### Core Components
 
@@ -55,6 +57,8 @@ The API key is stored securely in `conf/openai_api.key` and managed via `llm-api
     ./bin/llm-api-key-manager.sh
     # Select Option 2 to input and save your API Key (sk-...).
 
+![프로젝트 제목 이미지](./docs/images/api-key.png)
+![프로젝트 제목 이미지](./docs/images/api-key2.png)
 
 ## 🚀 Usage
 
@@ -79,7 +83,8 @@ Place your subtitle files in `srt/input` and run the scheduler.
         --lang ko \
         -j 5
 
-
+![프로젝트 제목 이미지](./docs/images/main.png)
+![프로젝트 제목 이미지](./docs/images/sub-2.png)
 ### 3. Check Results
 
 - **Translated Subtitles:** `srt/output/`
@@ -87,6 +92,8 @@ Place your subtitle files in `srt/input` and run the scheduler.
 - **Success/Fail Files:** `srt/success/` and `srt/failed/`
 
 - **Final Summary and Cost Report:** `log/summary_*.tsv`
+
+![프로젝트 제목 이미지](./docs/images/translate-1.png)
 
 
 ## 💰 Cost and Financial Management
@@ -210,4 +217,5 @@ API 키는 `conf/openai_api.key` 파일에 저장되며, `llm-api-key-manager.sh
 KH-LLM-TransQueue is distributed under the MIT License. See the `LICENSE` file in the repository root for full license text.
 
 KH-LLM-TransQueue는 MIT 라이선스로 배포되며, 자세한 내용은 저장소 루트의 `LICENSE` 파일을 참고해 주세요. 본 프로젝트는 LLM-Subtrans 및 그 종속 라이브러리들의 라이선스를 `engine/LICENSE.llm-subtrans` 파일에 명시된 형태 그대로 존중하고 준수합니다.
+
 
