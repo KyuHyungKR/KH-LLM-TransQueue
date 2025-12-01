@@ -1,11 +1,4 @@
 # KH LLM TransQueue Python Dependencies
-# 필요한 Python 패키지를 명시합니다.
-
-# OpenAI API 통신을 위한 라이브러리
 openai
-
-# HTTP 요청 처리를 위한 범용 라이브러리
 requests
-
-# SRT 자막 파일 파싱 및 처리를 위한 라이브러리
 pysrt
