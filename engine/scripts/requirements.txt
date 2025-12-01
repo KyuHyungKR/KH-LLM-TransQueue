@@ -1,0 +1,4 @@
+# KH LLM TransQueue Python Dependencies
+openai
+requests
+pysrt

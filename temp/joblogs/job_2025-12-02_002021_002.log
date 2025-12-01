@@ -1,0 +1,2 @@
+[ERROR] Python engine not found at: /download/KH-LLM-TransQueue/engine/envsubtrans/bin/python
+        Please run './bin/llm-install-engine.sh' to install dependencies.

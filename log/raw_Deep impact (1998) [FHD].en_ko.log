@@ -1,0 +1,223 @@
+INFO: Initialising log
+INFO: Loading legacy instruction file: /download/KH-LLM-TransQueue/prompt/movie_drama_prompt.txt
+INFO: Created 126 scenes and 141 batches for translation
+INFO: Translating 1694 subtitles from /download/KH-LLM-TransQueue/srt/input/Deep impact (1998) [FHD].en.srt
+INFO: Output path will be: /download/KH-LLM-TransQueue/srt/output/Deep impact (1998) [FHD].en.ko.srt
+INFO: Translating with model gpt-4.1-mini, Using API Base: https://api.openai.com/v1
+INFO: Translating 1694 lines in 126 scenes
+INFO: OpenAI usage - prompt=1335, completion=347, total=1682
+INFO: OpenAI usage - prompt=928, completion=5, total=933
+INFO: OpenAI usage - prompt=981, completion=41, total=1022
+INFO: OpenAI usage - prompt=929, completion=7, total=936
+INFO: OpenAI usage - prompt=940, completion=11, total=951
+INFO: OpenAI usage - prompt=930, completion=7, total=937
+INFO: OpenAI usage - prompt=935, completion=17, total=952
+INFO: OpenAI usage - prompt=947, completion=26, total=973
+INFO: OpenAI usage - prompt=1058, completion=121, total=1179
+INFO: OpenAI usage - prompt=1083, completion=161, total=1244
+INFO: OpenAI usage - prompt=1071, completion=160, total=1231
+INFO: OpenAI usage - prompt=1085, completion=198, total=1283
+INFO: OpenAI usage - prompt=1062, completion=138, total=1200
+INFO: OpenAI usage - prompt=1573, completion=645, total=2218
+INFO: OpenAI usage - prompt=1092, completion=131, total=1223
+INFO: OpenAI usage - prompt=1457, completion=491, total=1948
+INFO: OpenAI usage - prompt=1260, completion=275, total=1535
+INFO: OpenAI usage - prompt=1225, completion=263, total=1488
+INFO: OpenAI usage - prompt=959, completion=29, total=988
+INFO: OpenAI usage - prompt=946, completion=23, total=969
+INFO: OpenAI usage - prompt=1133, completion=186, total=1319
+INFO: OpenAI usage - prompt=993, completion=64, total=1057
+INFO: OpenAI usage - prompt=929, completion=6, total=935
+INFO: OpenAI usage - prompt=933, completion=11, total=944
+INFO: OpenAI usage - prompt=1015, completion=86, total=1101
+INFO: OpenAI usage - prompt=928, completion=5, total=933
+INFO: OpenAI usage - prompt=1650, completion=609, total=2259
+WARNING: Unable to match 6 lines with a source line
+WARNING: Scene 23 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=2344, completion=608, total=2952
+WARNING: Unable to match 6 lines with a source line
+WARNING: Retry failed validation: No translation found for 6 lines
+WARNING: Errors encountered translating scene 23 batch 1
+INFO: OpenAI usage - prompt=932, completion=8, total=940
+INFO: OpenAI usage - prompt=967, completion=41, total=1008
+INFO: OpenAI usage - prompt=1117, completion=162, total=1279
+INFO: OpenAI usage - prompt=1247, completion=302, total=1549
+INFO: OpenAI usage - prompt=1023, completion=91, total=1114
+INFO: OpenAI usage - prompt=1325, completion=364, total=1689
+INFO: OpenAI usage - prompt=1247, completion=285, total=1532
+INFO: OpenAI usage - prompt=1079, completion=137, total=1216
+INFO: OpenAI usage - prompt=1071, completion=141, total=1212
+INFO: OpenAI usage - prompt=1072, completion=157, total=1229
+INFO: OpenAI usage - prompt=1076, completion=159, total=1235
+INFO: OpenAI usage - prompt=1655, completion=705, total=2360
+WARNING: Unable to match 2 lines with a source line
+WARNING: Scene 31 batch 5 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=2445, completion=705, total=3150
+WARNING: Unable to match 2 lines with a source line
+WARNING: Retry failed validation: No translation found for 2 lines
+WARNING: Errors encountered translating scene 31 batch 5
+INFO: OpenAI usage - prompt=1434, completion=427, total=1861
+INFO: OpenAI usage - prompt=1077, completion=157, total=1234
+INFO: OpenAI usage - prompt=1061, completion=140, total=1201
+INFO: OpenAI usage - prompt=1515, completion=518, total=2033
+INFO: OpenAI usage - prompt=1056, completion=116, total=1172
+INFO: OpenAI usage - prompt=1064, completion=139, total=1203
+INFO: OpenAI usage - prompt=1073, completion=149, total=1222
+INFO: OpenAI usage - prompt=1571, completion=589, total=2160
+INFO: OpenAI usage - prompt=1261, completion=323, total=1584
+WARNING: Unable to match 2 lines with a source line
+WARNING: Scene 35 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1669, completion=334, total=2003
+WARNING: Unable to match 2 lines with a source line
+WARNING: Retry failed validation: No translation found for 2 lines
+WARNING: Errors encountered translating scene 35 batch 1
+INFO: OpenAI usage - prompt=1324, completion=395, total=1719
+INFO: OpenAI usage - prompt=1131, completion=215, total=1346
+INFO: OpenAI usage - prompt=930, completion=9, total=939
+INFO: OpenAI usage - prompt=1145, completion=207, total=1352
+INFO: OpenAI usage - prompt=1030, completion=96, total=1126
+INFO: OpenAI usage - prompt=968, completion=43, total=1011
+INFO: OpenAI usage - prompt=1003, completion=71, total=1074
+INFO: OpenAI usage - prompt=934, completion=13, total=947
+INFO: OpenAI usage - prompt=1031, completion=94, total=1125
+INFO: OpenAI usage - prompt=1377, completion=410, total=1787
+INFO: OpenAI usage - prompt=1218, completion=264, total=1482
+INFO: OpenAI usage - prompt=977, completion=45, total=1022
+INFO: OpenAI usage - prompt=943, completion=16, total=959
+INFO: OpenAI usage - prompt=969, completion=43, total=1012
+INFO: OpenAI usage - prompt=931, completion=15, total=946
+INFO: OpenAI usage - prompt=992, completion=62, total=1054
+INFO: OpenAI usage - prompt=1048, completion=128, total=1176
+INFO: OpenAI usage - prompt=1331, completion=357, total=1688
+INFO: OpenAI usage - prompt=1126, completion=175, total=1301
+INFO: OpenAI usage - prompt=1039, completion=103, total=1142
+INFO: OpenAI usage - prompt=956, completion=29, total=985
+INFO: OpenAI usage - prompt=1062, completion=127, total=1189
+INFO: OpenAI usage - prompt=935, completion=12, total=947
+INFO: OpenAI usage - prompt=989, completion=62, total=1051
+INFO: OpenAI usage - prompt=1006, completion=61, total=1067
+INFO: OpenAI usage - prompt=983, completion=64, total=1047
+INFO: OpenAI usage - prompt=958, completion=34, total=992
+INFO: OpenAI usage - prompt=1203, completion=260, total=1463
+INFO: OpenAI usage - prompt=1080, completion=178, total=1258
+WARNING: Unable to match 1 lines with a source line
+WARNING: Scene 64 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1343, completion=175, total=1518
+WARNING: Unable to match 1 lines with a source line
+WARNING: Retry failed validation: No translation found for 1 lines
+WARNING: Errors encountered translating scene 64 batch 1
+INFO: OpenAI usage - prompt=928, completion=5, total=933
+INFO: OpenAI usage - prompt=1122, completion=196, total=1318
+WARNING: Unable to match 0 lines with a source line
+WARNING: Scene 66 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1402, completion=213, total=1615
+INFO: Retry passed validation
+INFO: OpenAI usage - prompt=947, completion=26, total=973
+INFO: OpenAI usage - prompt=929, completion=9, total=938
+INFO: OpenAI usage - prompt=947, completion=21, total=968
+INFO: OpenAI usage - prompt=934, completion=11, total=945
+INFO: OpenAI usage - prompt=955, completion=24, total=979
+INFO: OpenAI usage - prompt=933, completion=11, total=944
+INFO: OpenAI usage - prompt=1082, completion=160, total=1242
+INFO: OpenAI usage - prompt=1078, completion=149, total=1227
+INFO: OpenAI usage - prompt=1746, completion=767, total=2513
+INFO: OpenAI usage - prompt=1197, completion=256, total=1453
+INFO: OpenAI usage - prompt=1116, completion=166, total=1282
+INFO: OpenAI usage - prompt=1252, completion=282, total=1534
+WARNING: Unable to match 1 lines with a source line
+WARNING: Scene 76 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1619, completion=282, total=1901
+WARNING: Unable to match 1 lines with a source line
+WARNING: Retry failed validation: No translation found for 1 lines
+WARNING: Errors encountered translating scene 76 batch 1
+INFO: OpenAI usage - prompt=1014, completion=83, total=1097
+INFO: OpenAI usage - prompt=1177, completion=241, total=1418
+WARNING: Unable to match 0 lines with a source line
+WARNING: Scene 78 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1502, completion=247, total=1749
+WARNING: Unable to match 0 lines with a source line
+WARNING: Retry failed validation: 1 translations returned a blank line
+WARNING: Errors encountered translating scene 78 batch 1
+INFO: OpenAI usage - prompt=941, completion=17, total=958
+INFO: OpenAI usage - prompt=1096, completion=176, total=1272
+INFO: OpenAI usage - prompt=1080, completion=160, total=1240
+INFO: OpenAI usage - prompt=1198, completion=268, total=1466
+INFO: OpenAI usage - prompt=1155, completion=210, total=1365
+INFO: OpenAI usage - prompt=1016, completion=96, total=1112
+INFO: OpenAI usage - prompt=967, completion=50, total=1017
+INFO: OpenAI usage - prompt=1078, completion=155, total=1233
+INFO: OpenAI usage - prompt=999, completion=74, total=1073
+INFO: OpenAI usage - prompt=935, completion=14, total=949
+INFO: OpenAI usage - prompt=1318, completion=335, total=1653
+INFO: OpenAI usage - prompt=1016, completion=87, total=1103
+INFO: OpenAI usage - prompt=1381, completion=457, total=1838
+INFO: OpenAI usage - prompt=1511, completion=497, total=2008
+WARNING: Unable to match 10 lines with a source line
+WARNING: Scene 92 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=2093, completion=497, total=2590
+INFO: Retry passed validation
+INFO: OpenAI usage - prompt=973, completion=43, total=1016
+INFO: OpenAI usage - prompt=990, completion=62, total=1052
+INFO: OpenAI usage - prompt=1126, completion=191, total=1317
+WARNING: Unable to match 1 lines with a source line
+WARNING: Scene 95 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=1402, completion=192, total=1594
+WARNING: Unable to match 1 lines with a source line
+WARNING: Retry failed validation: No translation found for 1 lines
+WARNING: Errors encountered translating scene 95 batch 1
+INFO: OpenAI usage - prompt=1236, completion=302, total=1538
+INFO: OpenAI usage - prompt=1092, completion=151, total=1243
+INFO: OpenAI usage - prompt=1207, completion=255, total=1462
+INFO: OpenAI usage - prompt=941, completion=19, total=960
+INFO: OpenAI usage - prompt=1156, completion=260, total=1416
+INFO: OpenAI usage - prompt=945, completion=24, total=969
+INFO: OpenAI usage - prompt=1649, completion=651, total=2300
+WARNING: Unable to match 0 lines with a source line
+WARNING: Scene 102 batch 1 failed validation, requesting retranslation
+INFO: OpenAI usage - prompt=2383, completion=652, total=3035
+WARNING: Unable to match 0 lines with a source line
+WARNING: Retry failed validation: 1 translations returned a blank line
+WARNING: Errors encountered translating scene 102 batch 1
+INFO: OpenAI usage - prompt=1325, completion=397, total=1722
+INFO: OpenAI usage - prompt=952, completion=29, total=981
+INFO: OpenAI usage - prompt=951, completion=30, total=981
+INFO: OpenAI usage - prompt=1241, completion=287, total=1528
+INFO: OpenAI usage - prompt=951, completion=31, total=982
+INFO: OpenAI usage - prompt=1017, completion=84, total=1101
+INFO: OpenAI usage - prompt=939, completion=14, total=953
+INFO: OpenAI usage - prompt=945, completion=23, total=968
+INFO: OpenAI usage - prompt=981, completion=48, total=1029
+INFO: OpenAI usage - prompt=1269, completion=298, total=1567
+INFO: OpenAI usage - prompt=939, completion=14, total=953
+INFO: OpenAI usage - prompt=976, completion=44, total=1020
+INFO: OpenAI usage - prompt=1206, completion=227, total=1433
+INFO: OpenAI usage - prompt=941, completion=25, total=966
+INFO: OpenAI usage - prompt=949, completion=31, total=980
+INFO: OpenAI usage - prompt=1062, completion=132, total=1194
+INFO: OpenAI usage - prompt=933, completion=13, total=946
+INFO: OpenAI usage - prompt=931, completion=8, total=939
+INFO: OpenAI usage - prompt=929, completion=7, total=936
+INFO: OpenAI usage - prompt=930, completion=8, total=938
+INFO: OpenAI usage - prompt=1048, completion=109, total=1157
+INFO: OpenAI usage - prompt=1200, completion=241, total=1441
+INFO: OpenAI usage - prompt=1587, completion=537, total=2124
+INFO: OpenAI usage - prompt=1299, completion=396, total=1695
+INFO: Successfully translated 1681 lines!
+WARNING: Failed to translate 15 lines:
+INFO: Untranslated > 315. but it just seems that way.
+INFO: Untranslated > 316. I want...
+INFO: Untranslated > 317. Want?
+INFO: Untranslated > 318. May I...
+INFO: Untranslated > 319. May I have the first question?
+INFO: Untranslated > 320. We'll see you Tuesday, Ms Lerner.
+INFO: Untranslated > 514. Our society will continue as normal.
+INFO: Untranslated > 515. Work will go on. You will pay your bills.
+INFO: Untranslated > 708. that's only gonna make things worse.
+INFO: Untranslated > 709. So... what do we do?
+INFO: Untranslated > 982. but also for his dedication to the advancement of space technology.
+INFO: Untranslated > 1125. We've been preselected.
+INFO: Untranslated > 1147. Anybody?
+INFO: Untranslated > 1343. Go home and tell it to Chloe.
+INFO: Untranslated > 1464. Good luck to us all.
+INFO: Saving translation to /download/KH-LLM-TransQueue/srt/output/Deep impact (1998) [FHD].en.ko.srt
+WARNING: 2 lines were empty and were not written to the output file
