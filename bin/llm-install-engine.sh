@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# KH LLM TransQueue - Engine Installation Script (v1.1 - Path Fixed)
+# KH LLM TransQueue - Engine Installation Script (v1.2 - Tmux Added)
 
 # --- Configuration & Path Setup ---
 # # English # Set strict mode: exit immediately if a command exits with a non-zero status.
@@ -9,8 +9,8 @@ set -euo pipefail
 # # English # Determine the script's directory.
 # # 한글 # 스크립트의 디렉토리를 결정합니다.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# # English # FIX: Set BASE_DIR to the project root (one level up from bin/).
-# # 한글 # 수정: BASE_DIR를 프로젝트 루트(bin/에서 한 단계 위)로 설정합니다.
+# # English # Set BASE_DIR to the project root (one level up from bin/).
+# # 한글 # BASE_DIR를 프로젝트 루트(bin/에서 한 단계 위)로 설정합니다.
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
 
 # # English # Define core directories and files based on the corrected BASE_DIR.
@@ -24,8 +24,6 @@ SCRIPTS_DIR="$ENGINE_DIR/scripts"
 
 # # English # Define the source/destination for the core translation script.
 # # 한글 # 핵심 번역 스크립트의 원본/대상 경로를 정의합니다.
-# # English # NOTE: Assuming 'gpt-subtrans.py' is bundled in a 'source' directory for portability.
-# # 한글 # 참고: 'gpt-subtrans.py'는 포터빌리티를 위해 'source' 디렉토리에 번들되어 있다고 가정합니다.
 GPT_SUBTRANS_SRC="$BASE_DIR/source/gpt-subtrans.py"
 GPT_SUBTRANS_DEST="$SCRIPTS_DIR/gpt-subtrans.py"
 
@@ -36,15 +34,41 @@ GPT_SUBTRANS_DEST="$SCRIPTS_DIR/gpt-subtrans.py"
 # # 한글 # 구분을 위한 헤더를 출력합니다.
 line() { printf '\n==================== %s ====================\n' "$1"; }
 
-# # English # Check for required tools (Python 3).
-# # 한글 # 필수 도구(Python 3)의 존재 여부를 확인합니다.
+# # English # Check for required tools (Python 3 and tmux) and install tmux if missing.
+# # 한글 # 필수 도구(Python 3 및 tmux)의 존재 여부를 확인하고, 없으면 tmux를 설치합니다.
 check_tools() {
-    line "1. Checking Required Tools (Python & Venv)"
+    line "1. Checking Required Tools (Python, Venv, & Tmux)"
     if ! command -v python3 >/dev/null 2>&1; then
         echo "[ERROR] python3 is required but not found. Please install it." >&2
         exit 10 # Custom Error Code for Missing Tools
     fi
     echo "[OK] python3 found at $(command -v python3)"
+
+    if ! command -v tmux >/dev/null 2>&1; then
+        echo "[INFO] tmux (terminal multiplexer) not found. Attempting installation..."
+        
+        # # English # Detect package manager and install tmux
+        # # 한글 # 패키지 관리자를 감지하여 tmux를 설치합니다.
+        if command -v apt >/dev/null 2>&1; then
+            sudo apt update && sudo apt install -y tmux
+        elif command -v yum >/dev/null 2>&1; then
+            sudo yum install -y tmux
+        elif command -v dnf >/dev/null 2>&1; then
+            sudo dnf install -y tmux
+        else
+            echo "[ERROR] Cannot find apt, yum, or dnf. Please install tmux manually." >&2
+            exit 11
+        fi
+        
+        if command -v tmux >/dev/null 2>&1; then
+            echo "[OK] tmux installed successfully."
+        else
+            echo "[ERROR] tmux installation failed. Please install manually and re-run." >&2
+            exit 12
+        fi
+    else
+        echo "[OK] tmux found at $(command -v tmux)"
+    fi
 }
 
 
@@ -103,8 +127,10 @@ fi
 
 # 5. Place Core Translation Script
 line "5. Placing Core Translation Script (gpt-subtrans.py)"
-# # English # We assume the user has the Python core logic. If not, this step will fail.
-# # 한글 # 사용자가 Python 핵심 로직을 가지고 있다고 가정합니다. 그렇지 않다면 이 단계는 실패할 것입니다.
+# # English # Copy the script from source/ to engine/scripts/
+# # 한글 # source/에서 engine/scripts/로 스크립트를 복사합니다.
+GPT_SUBTRANS_SRC="$BASE_DIR/source/gpt-subtrans.py"
+
 if [[ -f "$GPT_SUBTRANS_SRC" ]]; then
     cp "$GPT_SUBTRANS_SRC" "$GPT_SUBTRANS_DEST"
     chmod +x "$GPT_SUBTRANS_DEST"
@@ -122,6 +148,6 @@ line "6. Installation Complete"
 echo "[SUCCESS] KH-LLM-TransQueue Engine is ready."
 echo "Python Path : $PYTHON_BIN"
 echo "Script Path : $GPT_SUBTRANS_DEST"
-echo "Run the scheduler from the bin directory: $BASE_DIR/bin/llm-scheduler.sh"
+echo "Run the scheduler from the bin directory: $BASE_DIR/bin/llm-menu.sh"
 
 exit 0
