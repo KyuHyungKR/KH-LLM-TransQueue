@@ -1,14 +1,16 @@
-# 👑 KH LLM TransQueue (v1.2: Final Stability)
+# 👑 KH LLM TransQueue: : Subtitle Translator(v1.2)
 
 ## 🌎 English Version
 
 KH-LLM-TransQueue is a **lightweight subtitle parallel processing system** that combines the concurrency of Bash scripting with the LLM integration capabilities of Python. All elements are designed with **'Modularity'** and **'Portability'** as the highest priorities.
 
-
 ## 🌟 Project Overview & Architecture
 
 This project uses a Master-Worker architecture to efficiently process multiple subtitle files and track cost and token usage in real-time.
 
+![프로젝트 제목 이미지](./docs/images/title.png)
+
+![프로젝트 제목 이미지](./docs/images/translate-2.png)
 
 ### Core Components
 
@@ -55,6 +57,8 @@ The API key is stored securely in `conf/openai_api.key` and managed via `llm-api
     ./bin/llm-api-key-manager.sh
     # Select Option 2 to input and save your API Key (sk-...).
 
+![프로젝트 제목 이미지](./docs/images/api-key.png)
+![프로젝트 제목 이미지](./docs/images/api-key2.png)
 
 ## 🚀 Usage
 
@@ -79,7 +83,8 @@ Place your subtitle files in `srt/input` and run the scheduler.
         --lang ko \
         -j 5
 
-
+![프로젝트 제목 이미지](./docs/images/main.png)
+![프로젝트 제목 이미지](./docs/images/sub-2.png)
 ### 3. Check Results
 
 - **Translated Subtitles:** `srt/output/`
@@ -87,6 +92,8 @@ Place your subtitle files in `srt/input` and run the scheduler.
 - **Success/Fail Files:** `srt/success/` and `srt/failed/`
 
 - **Final Summary and Cost Report:** `log/summary_*.tsv`
+
+![프로젝트 제목 이미지](./docs/images/translate-1.png)
 
 
 ## 💰 Cost and Financial Management
@@ -99,7 +106,7 @@ Verify the configuration files in the `conf/` folder for accurate cost tracking.
 | `conf/llm-cost-fx.conf`  | Defines exchange rates (KRW, JPY, etc.) relative to USD. |
 
 
-## 🇰🇷 한글 버전
+## 🇰🇷 한글 버전 (OpenAI API 기반 영화자막 번역기)
 
 KH-LLM-TransQueue는 Bash 스크립트의 병렬 처리 능력과 Python의 LLM 연동 능력을 결합한 **병렬 자막 번역 시스템**입니다. 시스템의 모든 요소는 \*\*'모듈성'\*\*과 \*\*'모빌리티(Portable)'\*\*를 최우선 가치로 설계되었습니다.
 
@@ -210,4 +217,7 @@ API 키는 `conf/openai_api.key` 파일에 저장되며, `llm-api-key-manager.sh
 KH-LLM-TransQueue is distributed under the MIT License. See the `LICENSE` file in the repository root for full license text.
 
 KH-LLM-TransQueue는 MIT 라이선스로 배포되며, 자세한 내용은 저장소 루트의 `LICENSE` 파일을 참고해 주세요. 본 프로젝트는 LLM-Subtrans 및 그 종속 라이브러리들의 라이선스를 `engine/LICENSE.llm-subtrans` 파일에 명시된 형태 그대로 존중하고 준수합니다.
+
+
+
 
