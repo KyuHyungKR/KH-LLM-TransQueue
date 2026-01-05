@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo "[SHELL DEBUG] $(date) - Args: $*" >> /download/KH-LLM-TransQueue/log/debug_engine.log
 set -eo pipefail
 
 # -----------------------------------------------------------------------------
@@ -9,6 +10,13 @@ set -eo pipefail
 # 현재 스크립트(bin/single_trans.sh)의 위치를 기준으로 프로젝트 루트를 찾습니다.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BASE_DIR="$(dirname "$SCRIPT_DIR")"
+
+# --- LANG FIX ---
+echo "[DEBUG] Argument 3 (Lang): $3" >> /download/KH-LLM-TransQueue/log/debug_engine.log
+TARGET_FULL=""
+[ "$3" = "ko" ] && TARGET_FULL="Korean (한국어)"
+export TARGET_LANG="$TARGET_FULL"
+
 
 # ------------------------------
 # API Key Check & Load
@@ -130,13 +138,11 @@ OUTPUT_FILE="$OUTPUT_DIR/${STEM}.${LANGCODE}.srt"
 RAW_LOG="$LOG_DIR/raw_${STEM}_${LANGCODE}.log"
 : > "$RAW_LOG"
 FILE_START_TS=$(date +%s)
+echo "[DIAG] Engine Start - Lang: $LANGCODE" >> /download/KH-LLM-TransQueue/log/debug_engine.log
 
 # Run Python Engine
 # 파이썬 엔진 실행
-if ! "$PYTHON" "$GPT_SUBTRANS" -m "$MODEL_NAME" -l "$LANGCODE" \
-  --instructionfile "$PROMPT_FILE" --maxbatchsize "$MAX_BATCH_SIZE" \
-  --scenethreshold "$SCENE_THRESHOLD" --temperature "$TEMPERATURE" \
-  -o "$OUTPUT_FILE" "$INPUT_FILE" >"$RAW_LOG" 2>&1; then
+if ! "$PYTHON" "$GPT_SUBTRANS" -m "$MODEL_NAME" -l "$TARGET_LANG"  --instructionfile "$PROMPT_FILE" --maxbatchsize "$MAX_BATCH_SIZE"  --scenethreshold "$SCENE_THRESHOLD" --temperature "$TEMPERATURE"  -o "$OUTPUT_FILE" "$INPUT_FILE" >"$RAW_LOG" 2>&1; then
   
   # Error Handling: Check raw log for specific API failure patterns.
   # 에러 처리: API 로그에서 특정 실패 패턴을 검색합니다.
